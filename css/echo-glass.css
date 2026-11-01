@@ -1,0 +1,72 @@
+/* ECHO-INSPIRED LIQUID GLASS — Harmonix Web Edition
+   Edit these tokens to customize the glass look. Original CSS, not copied assets. */
+:root{
+  --bg:#090b12;--panel:rgba(255,255,255,.075);--panel-2:rgba(255,255,255,.105);
+  --panel-3:rgba(255,255,255,.14);--text:#f7f5ff;--muted:#a8a5b7;
+  --accent:#b7a0ff;--accent-2:#8065e8;--line:rgba(255,255,255,.13);
+  --radius:26px;--sidebar-width:250px;--player-height:92px;
+}
+html,body{background:#090b12}
+body{
+  background:
+    radial-gradient(ellipse at 12% 4%,rgba(119,83,204,.28),transparent 38%),
+    radial-gradient(ellipse at 92% 28%,rgba(42,126,158,.19),transparent 34%),
+    radial-gradient(ellipse at 52% 100%,rgba(116,74,166,.2),transparent 40%),
+    #090b12;
+  background-attachment:fixed;
+}
+.app-shell{gap:0}
+.sidebar{
+  background:rgba(16,17,27,.58);backdrop-filter:blur(28px) saturate(165%);
+  -webkit-backdrop-filter:blur(28px) saturate(165%);
+  border-right:1px solid var(--line);box-shadow:inset -1px 0 rgba(255,255,255,.025)
+}
+.topbar{
+  position:sticky;top:0;z-index:9;background:rgba(10,12,20,.48);
+  backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);
+  border-bottom:1px solid rgba(255,255,255,.09)
+}
+.search-box,.feature-card,.upload-callout,.track-row,.playlist-card,.settings-card{
+  background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.12);
+  box-shadow:inset 0 1px rgba(255,255,255,.10),0 14px 36px rgba(0,0,0,.16);
+  backdrop-filter:blur(22px) saturate(155%);-webkit-backdrop-filter:blur(22px) saturate(155%);
+}
+.search-box{background:rgba(255,255,255,.075);border-radius:18px}
+.feature-card{min-height:190px;border-radius:26px;transition:transform .24s ease,border-color .24s ease,background .24s ease}
+.feature-card:before{opacity:.68;filter:saturate(.85)}
+.feature-card:hover,.playlist-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.105)}
+.track-row{margin:4px 0;border-radius:17px;transition:background .2s ease,transform .2s ease}
+.track-row:hover{background:rgba(255,255,255,.11);transform:translateX(2px)}
+.nav-item{border:1px solid transparent;border-radius:16px;transition:background .2s ease,border-color .2s ease}
+.nav-item:hover,.nav-item.active{background:rgba(183,160,255,.15);border-color:rgba(183,160,255,.19);color:#fff}
+.nav-item.active span{color:var(--accent)}
+.brand-mark{background:linear-gradient(145deg,#e4d9ff,#8c70df);box-shadow:0 5px 24px rgba(157,125,255,.3)}
+.upload-button,.primary-button{background:linear-gradient(135deg,#d7caff,#a78bfa 60%,#8b72e8);box-shadow:0 7px 24px rgba(145,115,235,.25);transition:transform .2s ease,filter .2s ease}
+.upload-button:hover,.primary-button:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.outline-button,.icon-button{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10)}
+.icon-button:hover{background:rgba(255,255,255,.14)}
+.player-bar{
+  background:rgba(14,15,25,.64);backdrop-filter:blur(34px) saturate(180%);
+  -webkit-backdrop-filter:blur(34px) saturate(180%);
+  border-top:1px solid rgba(255,255,255,.17);
+  box-shadow:0 -16px 55px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.07)
+}
+.mini-art,.track-art,.playlist-cover{box-shadow:0 8px 22px rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.14)}
+.play-button{background:linear-gradient(145deg,#fff,#cfc2ff);box-shadow:0 5px 22px rgba(200,180,255,.22)}
+.progress-row input,.player-extra input{accent-color:var(--accent)}
+.modal{background:rgba(25,25,39,.82);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);box-shadow:0 24px 90px rgba(0,0,0,.45)}
+.modal::backdrop{background:rgba(2,3,9,.68);backdrop-filter:blur(8px)}
+.toast{background:rgba(38,35,55,.88);backdrop-filter:blur(20px);border-color:rgba(255,255,255,.16)}
+.hero-orb .orb-disc{box-shadow:0 0 90px rgba(169,139,250,.34),inset 0 1px rgba(255,255,255,.55)}
+.section-heading h2,.page-heading h1,.welcome-row h1{text-shadow:0 5px 28px rgba(0,0,0,.22)}
+/* Subtle glass edge highlight */
+.feature-card:after,.upload-callout:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 38%);opacity:.55}
+.feature-card,.upload-callout{isolation:isolate}
+@media(max-width:650px){
+  .sidebar{background:rgba(12,13,22,.76);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}
+  .nav-item{background:rgba(255,255,255,.045)}
+  .nav-item.active{background:rgba(183,160,255,.17)}
+  .player-bar{background:rgba(12,13,22,.78)}
+  .feature-card{min-height:158px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
